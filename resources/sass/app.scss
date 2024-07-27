@@ -1,0 +1,204 @@
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+$primary: #304059;
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.center-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .card {
+        background: white;
+        border: 0;
+        border-radius: 0;
+        box-shadow: 0 0 10px 1px rgba(0,0,0,.1);
+
+        .card-body {
+            padding: 25px;
+        }
+    }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    border-radius: 0;
+    padding: 25px 15px;
+}
+
+.search-input {
+    padding: 15px !important;
+}
+
+.btn-primary {
+    border-radius: 0 !important;
+    background-color: $primary !important;
+    border-color: $primary !important;
+    font-size: 14px !important;
+    font-weight: 500;
+    padding: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: #16202a !important;
+    }
+}
+
+.shadow-sm {
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.1) !important;
+}
+
+.item-thumbnail {
+    height: 225px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card {
+    background: #ebeef1;
+    border-radius: 8px;
+    border-color: #dcdcdc;
+    overflow: hidden;
+    box-shadow: 0 10px 10px -9px rgb(48 64 89);
+}
+
+.card-title.item-title {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+ul.pagination {
+
+    a.page-link {
+        color: $primary !important;
+        border-radius: 0 !important;
+    }
+
+    span.page-link {
+        border-radius: 0 !important;
+    }
+
+    .page-item.active .page-link {
+        background: $primary;
+        border-color: $primary;
+        border-radius: 0 !important;
+    }
+}
+
+.items-row {
+
+    .btn-primary {
+        font-size: 14px !important;
+        border-radius: 8px !important;
+        color: #eee;
+    }
+}
+
+.btn-transparent {
+    background: none;
+    color: #000;
+    border: 0;
+    box-shadow: none;
+    font-size: 18px;
+}
+
+label[for="bid"] {
+    width: 100%;
+}
+
+.btn-smaller {
+    font-size: 14px !important;
+}
+
+.cover__image {
+    position: relative;
+
+    > img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        position: relative;
+    }
+
+    .cover__profile {
+        position: absolute;
+        bottom: -20%;
+        left: -5%;
+        z-index: 5;
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            border: 5px solid white;
+            object-fit: cover;
+        }
+    }
+
+    .cover__desc {
+        padding: 50px 50px 50px 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.9));
+        color: white;
+
+        .card-title.item-title {
+            color: #ececec;
+        }
+
+        h4 {
+            color: #eee;
+            font-weight: 300;
+            font-size: 35px;
+            margin-top: 70px;
+        }
+
+        .dates {
+            color: #e8e8e8;
+            font-size: 14px;
+            font-weight: 300;
+            position: absolute;
+            right: 5%;
+            bottom: 5%;
+        }
+    }
+}
+
+input.form-control.search-input {
+    border: 2px solid #ebeef1 !important;
+    border-radius: 30px !important;
+}
+
+@media(max-width: 991px) {
+    .cover__image {
+
+        .cover__desc {
+            padding: 20px;
+
+            h4 {
+                margin-top: 0;
+                font-size: 22px;
+            }
+        }
+    }
+
+    .search-wrapper.w-100.pl-5.pr-5 {
+        padding: 0 !important;
+        margin: 10px 0;
+    }
+}
