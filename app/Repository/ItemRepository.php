@@ -19,7 +19,7 @@ class ItemRepository extends BaseRepository
     /**
      * CommentRepository constructor.
      *
-     * @param  Item  $item
+     * @param    $item
      */
     public function __construct(Item $item)
     {
